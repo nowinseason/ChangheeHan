@@ -118,10 +118,26 @@
                         <!-- Academic & Social Links -->
                         <div class="mt-8 flex space-x-5">
                             <!-- Replace '#' with your actual links -->
-                            <a href="Chan11@gsu.edu" title="Email" class="text-slate-500 hover:text-indigo-600">
-                                <span class="sr-only">Email</span>
-                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
-                            </a>
+                            <!-- This wrapper helps position the "Copied!" message -->
+                            <div class="relative">
+                                <button 
+                                    id="copy-email-btn"
+                                    data-email="Chan11@gsu.edu"
+                                    title="Copy email to clipboard" 
+                                    class="text-slate-500 hover:text-indigo-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
+                                    
+                                    <span class="sr-only">Copy email to clipboard</span>
+                                    <!-- The original Email icon -->
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                                </button>
+                                
+                                <!-- This is the "Copied!" popup message, hidden by default -->
+                                <span 
+                                    id="copy-feedback"
+                                    class="hidden absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-lg">
+                                    Copied!
+                                </span>
+                            </div>
                             <a href="https://scholar.google.com/citations?user=axVFSzcAAAAJ&hl=en&authuser=1" title="Google Scholar" class="text-slate-500 hover:text-indigo-600">
                                 <span class="sr-only">Google Scholar</span>
                                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.241 14.978 9 12 9s-5.548 2.241-6.758 4.769zM12 10c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5 2.5-1.119 2.5-2.5S13.381 10 12 10zM12 15c-4.33 0-8 2.8-8 6.5C4 23.3 7.58 24 12 24s8-.7 8-2.5c0-3.7-3.67-6.5-8-6.5z"/></svg>
@@ -424,6 +440,42 @@
             
             // Run once on load to set the initial state
             onScroll();
+
+            // --- Copy Email Button Logic ---
+            const copyBtn = document.getElementById('copy-email-btn');
+            const copyFeedback = document.getElementById('copy-feedback');
+
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    const email = copyBtn.dataset.email;
+
+                    // Create a temporary textarea to hold the email text
+                    const tempTextArea = document.createElement('textarea');
+                    tempTextArea.value = email;
+                    document.body.appendChild(tempTextArea);
+                    
+                    // Select and copy the text
+                    tempTextArea.select();
+                    try {
+                        document.execCommand('copy');
+                        
+                        // Show "Copied!" feedback message
+                        copyFeedback.classList.remove('hidden');
+                        
+                        // Hide the feedback message after 2 seconds
+                        setTimeout(() => {
+                            copyFeedback.classList.add('hidden');
+                        }, 2000);
+
+                    } catch (err) {
+                        console.error('Failed to copy email: ', err);
+                    }
+                    
+                    // Remove the temporary textarea
+                    document.body.removeChild(tempTextArea);
+                });
+            }
+            
         });
     </script>
 
