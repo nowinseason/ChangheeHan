@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changhee Han - PhD Student</title>
-    <meta name="description" content="Personal academic website of Changhee Han, a PhD student at Georgia State University (GSU).">
+    <meta name="description"
+        content="Personal academic website of Changhee Han, a PhD student at Georgia State University (GSU).">
     <meta name="author" content="Changhee Han">
     <meta name="google-site-verification" content="zZgERKvLRZo4jD2_3YCJoxlk3GRPVuW03esXbjK7XRc" />
 
@@ -27,6 +29,7 @@
         };
     </script>
 </head>
+
 <body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
 
     <!-- ===== Header & Navigation ===== -->
@@ -42,20 +45,28 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex md:space-x-8">
                     <a href="index.html" class="text-indigo-600 font-semibold transition-colors duration-200">Home</a>
-                    <a href="research.html" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Research</a>
-                    <a href="presentations.html" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Presentations</a>
-                    <a href="miscellaneous.html" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Miscellaneous</a>
+                    <a href="research.html"
+                        class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Research</a>
+                    <a href="presentations.html"
+                        class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Presentations</a>
+                    <a href="miscellaneous.html"
+                        class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Miscellaneous</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-indigo-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <button id="menu-btn" type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-indigo-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span class="sr-only">Open main menu</span>
-                        <svg id="menu-icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <svg id="menu-icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <svg id="menu-icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <svg id="menu-icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
@@ -65,10 +76,14 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden shadow-lg border-t border-slate-200 bg-white">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="bg-indigo-50 text-indigo-600 font-semibold block px-3 py-2 rounded-md text-base">Home</a>
-                <a href="research.html" class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Research</a>
-                <a href="presentations.html" class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Presentations</a>
-                <a href="miscellaneous.html" class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Miscellaneous</a>
+                <a href="index.html"
+                    class="bg-indigo-50 text-indigo-600 font-semibold block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="research.html"
+                    class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Research</a>
+                <a href="presentations.html"
+                    class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Presentations</a>
+                <a href="miscellaneous.html"
+                    class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Miscellaneous</a>
             </div>
         </div>
     </header>
@@ -79,12 +94,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
                 <!-- Left Column: Profile Card -->
-                <div class="md:col-span-1 flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                    <img 
-                        src="src/profile.JPEG"
-                        alt="Changhee Han" 
+                <div
+                    class="md:col-span-1 flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <img src="src/profile.JPEG" alt="Changhee Han"
                         class="w-48 h-48 object-cover rounded-full shadow-md border-4 border-slate-50">
-                    
+
                     <h1 class="mt-6 text-2xl font-bold text-slate-900">
                         Changhee Han
                     </h1>
@@ -96,7 +110,8 @@
                     </p>
 
                     <div class="mt-4 pt-4 border-t border-slate-100 w-full">
-                        <a href="mailto:Chan11@gsu.edu" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">
+                        <a href="mailto:Chan11@gsu.edu"
+                            class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">
                             Chan11@gsu.edu
                         </a>
                     </div>
@@ -104,36 +119,44 @@
                     <!-- Academic & Social Links -->
                     <div class="mt-5 flex justify-center space-x-4">
                         <div class="relative">
-                            <button 
-                                id="copy-email-btn"
-                                data-email="Chan11@gsu.edu"
-                                title="Copy email to clipboard" 
+                            <button id="copy-email-btn" data-email="Chan11@gsu.edu" title="Copy email to clipboard"
                                 class="text-slate-500 hover:text-indigo-600 transition-colors duration-200 focus:outline-none rounded-lg p-1">
                                 <span class="sr-only">Copy email to clipboard</span>
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+                                </svg>
                             </button>
-                            <span 
-                                id="copy-feedback"
+                            <span id="copy-feedback"
                                 class="hidden absolute -top-9 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-lg">
                                 Copied!
                             </span>
                         </div>
-                        <a href="https://scholar.google.com/citations?user=axVFSzcAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer" title="Google Scholar" class="text-slate-500 hover:text-indigo-600 p-1">
+                        <a href="https://scholar.google.com/citations?user=axVFSzcAAAAJ&hl=en&authuser=1"
+                            target="_blank" rel="noopener noreferrer" title="Google Scholar"
+                            class="text-slate-500 hover:text-indigo-600 p-1">
                             <span class="sr-only">Google Scholar</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.241 14.978 9 12 9s-5.548 2.241-6.758 4.769zM12 10c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5 2.5-1.119 2.5-2.5S13.381 10 12 10zM12 15c-4.33 0-8 2.8-8 6.5C4 23.3 7.58 24 12 24s8-.7 8-2.5c0-3.7-3.67-6.5-8-6.5z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.241 14.978 9 12 9s-5.548 2.241-6.758 4.769zM12 10c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5 2.5-1.119 2.5-2.5S13.381 10 12 10zM12 15c-4.33 0-8 2.8-8 6.5C4 23.3 7.58 24 12 24s8-.7 8-2.5c0-3.7-3.67-6.5-8-6.5z" />
+                            </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/changheehan-info/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-slate-500 hover:text-indigo-600 p-1">
+                        <a href="https://www.linkedin.com/in/changheehan-info/" target="_blank"
+                            rel="noopener noreferrer" title="LinkedIn" class="text-slate-500 hover:text-indigo-600 p-1">
                             <span class="sr-only">LinkedIn</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
                         </a>
                     </div>
 
                     <!-- CV Button -->
                     <div class="mt-6 w-full">
-                        <a href="src/Init_CV.pdf" 
-                           class="block w-full bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:bg-indigo-700 transition-all duration-200"
-                           target="_blank" rel="noopener noreferrer">
-                           View My CV
+                        <a href="src/Init_CV.pdf"
+                            class="block w-full bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:bg-indigo-700 transition-all duration-200"
+                            target="_blank" rel="noopener noreferrer">
+                            View My CV
                         </a>
                     </div>
                 </div>
@@ -146,12 +169,13 @@
 
                     <div class="mt-6 text-lg text-slate-600 space-y-5 leading-relaxed">
                         <p>
-                            I am a second-year PhD student in Computer Information Systems at Georgia State University, 
+                            I am a third-year PhD student in Computer Information Systems at Georgia State University,
                             where I am fortunate to be advised by Yu-Kai Lin.
                         </p>
                         <p>
-                            My research focuses on the intersection of public policy and Information Systems (IS), 
-                            with a specific emphasis on the governance and societal implications of AI and digital innovation.
+                            My research focuses on the intersection of public policy and Information Systems (IS),
+                            with a specific emphasis on the governance and societal implications of AI and digital
+                            innovation.
                         </p>
                         <p>
                             I'm always open to collaborating and discussing new ideas.
@@ -202,4 +226,5 @@
     </script>
 
 </body>
+
 </html>
