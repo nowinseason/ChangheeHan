@@ -85,7 +85,7 @@
             <div class="space-y-8">
                 <!-- ===== Project Card: Elliott Wave Structural Modeling ===== -->
                 <section class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
-                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 border-b border-slate-100 pb-6">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 border-b border-slate-100 pb-6">
                         <div>
                             <div class="flex flex-wrap items-center gap-2 mb-2">
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">
@@ -102,21 +102,51 @@
                                 Algorithmic Elliott Wave Structural Modeling (Glenn Neely Method)
                             </h2>
                             <p class="mt-2 text-sm md:text-base text-slate-600 leading-relaxed">
-                                An objective algorithmic implementation of Glenn Neely&rsquo;s <em>Mastering Elliott Wave</em> (Chapter 3: Preliminary Analysis).
-                                The system formalizes market wave identification into a five-stage deductive pipeline:
-                                <strong>Monowave Detection</strong> &rarr; <strong>Rule of Proportion</strong> &rarr; <strong>Rule of Neutrality (&lt;45&deg;)</strong> &rarr;
-                                <strong>Rules of Observation (Wave Grouping)</strong> &rarr; <strong>Retracement Rules (1&ndash;7) &amp; Pre-Constructive Structure Labeling</strong>
-                                (<code>:5</code>, <code>:s5</code>, <code>:L5</code>, <code>:F3</code>, <code>:c3</code>, <code>x:c3</code>, <code>:sL3</code>, <code>:L3</code>).
+                                Financial markets alternate between <strong>Trends (Impulses)</strong> that push prices forward and <strong>Pullbacks (Corrections)</strong> where prices pause or retrace.
+                                Based on Glenn Neely&rsquo;s <em>Mastering Elliott Wave</em>, this project replaces subjective chart-guessing with an objective mathematical algorithm that turns noisy minute-by-minute price ticks into clear market structure.
                             </p>
                         </div>
-                        <div class="flex flex-shrink-0 items-center gap-3">
+                        <div class="flex flex-wrap sm:flex-nowrap flex-shrink-0 items-center gap-2.5">
+                            <a href="https://elliottwavemodeling-han.streamlit.app" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-colors shadow-sm">
+                                <span>&#128640;</span>
+                                Live Streamlit App
+                            </a>
                             <a href="https://github.com/nowinseason/Elliottwave_Modeling" target="_blank" rel="noopener noreferrer"
-                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-slate-900 text-white hover:bg-indigo-700 transition-colors shadow-sm">
+                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-slate-900 text-white hover:bg-slate-700 transition-colors shadow-sm">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                                 </svg>
-                                GitHub Repository
+                                GitHub Code
                             </a>
+                        </div>
+                    </div>
+
+                    <!-- ===== 4 Key Benefits for Laypeople ===== -->
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <p class="text-xs font-bold uppercase tracking-wide text-indigo-600">1. Filters Out Noise</p>
+                            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                Automatically absorbs minor sideways wiggles (&lt;45&deg; angle) and simplifies raw price ticks into clean <strong>Major Swings (<code>m1, m2...</code>)</strong>.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <p class="text-xs font-bold uppercase tracking-wide text-sky-600">2. Trend vs. Pullback</p>
+                            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                Distinguishes strong <strong>Trend Impulses (<code>:5</code>)</strong> from temporary <strong>Counter-Trend Pullbacks (<code>:F3, :c3</code>)</strong> so you know which direction dominates.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <p class="text-xs font-bold uppercase tracking-wide text-emerald-600">3. Spots Exhaustion</p>
+                            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                Flags <strong>Pattern Endings (<code>:L5</code> &amp; <code>:L3</code>)</strong> when a 5-wave trend, 3-wave pullback, or triangle has completed and a reversal is likely.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <p class="text-xs font-bold uppercase tracking-wide text-amber-600">4. Objective Math</p>
+                            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                Uses exact <strong>Fibonacci ratios (38.2%, 61.8%, 100%, 161.8%)</strong> between adjacent swings instead of subjective human eye-balling.
+                            </p>
                         </div>
                     </div>
 
@@ -125,7 +155,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
                             <div>
                                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
-                                    BTC/USD Market Window
+                                    1. Market Scenario
                                 </label>
                                 <select id="ew-window-select" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                     <option value="5570">Default Study Window (Idx 5570)</option>
@@ -137,33 +167,35 @@
 
                             <div>
                                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
-                                    Price Series (Ch. 2, p. 2-10)
+                                    2. Chart Label Style
                                 </label>
-                                <select id="ew-price-type" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                                    <option value="open">Open Price</option>
-                                    <option value="hl2">Neely Cash Avg ((High+Low)/2)</option>
+                                <select id="ew-label-mode" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    <option value="key">Key Turning Points (Easy to Read)</option>
+                                    <option value="plain">All Swings (Plain English)</option>
+                                    <option value="tech">All Swings (Technical Neely Codes)</option>
+                                    <option value="none">Hide Labels</option>
                                 </select>
                             </div>
 
                             <div>
                                 <div class="flex justify-between text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
-                                    <span>Simulation Ticks</span>
-                                    <span id="ew-steps-val" class="text-indigo-400 font-bold">100</span>
+                                    <span>3. Time Window (Mins)</span>
+                                    <span id="ew-steps-val" class="text-indigo-400 font-bold">90</span>
                                 </div>
-                                <input id="ew-steps-slider" type="range" min="20" max="160" step="1" value="100"
+                                <input id="ew-steps-slider" type="range" min="20" max="160" step="1" value="90"
                                        class="w-full accent-indigo-500 cursor-pointer h-2 bg-slate-700 rounded-lg">
                             </div>
 
                             <div class="flex items-center gap-1.5">
-                                <button id="ew-btn-reset" type="button" title="Reset to 25 ticks"
+                                <button id="ew-btn-reset" type="button" title="Reset to 25 mins"
                                         class="px-2.5 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-semibold text-slate-200 transition">
                                     &#9198; 25
                                 </button>
-                                <button id="ew-btn-step1" type="button" title="Step +1 tick"
+                                <button id="ew-btn-step1" type="button" title="Step +1 min"
                                         class="px-2.5 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-semibold text-slate-200 transition">
-                                    +1 Tick
+                                    +1
                                 </button>
-                                <button id="ew-btn-step10" type="button" title="Step +10 ticks"
+                                <button id="ew-btn-step10" type="button" title="Step +10 mins"
                                         class="px-2.5 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-semibold text-slate-200 transition">
                                     +10
                                 </button>
@@ -174,151 +206,150 @@
                             </div>
                         </div>
 
-                        <!-- Second row of controls: Neutrality slider, Fibonacci selector, and Layer toggles -->
+                        <!-- Second row of controls -->
                         <div class="mt-4 pt-4 border-t border-slate-800 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
                             <div class="md:col-span-3">
                                 <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                    <span>Rule of Neutrality (&lt; Angle)</span>
+                                    <span>Noise Filter (&lt; Angle)</span>
                                     <span id="ew-angle-val" class="text-amber-400 font-semibold">45&deg;</span>
                                 </div>
                                 <input id="ew-angle-slider" type="range" min="0" max="60" step="5" value="45"
                                        class="w-full accent-amber-500 cursor-pointer h-1.5 bg-slate-700 rounded-lg">
                             </div>
 
-                            <div class="md:col-span-3">
-                                <label class="block text-xs text-slate-400 mb-1">Fibonacci Retracement Inspector</label>
+                            <div class="md:col-span-4">
+                                <label class="block text-xs text-slate-400 mb-1">Overlay Fibonacci Retracement Levels</label>
                                 <select id="ew-fib-select" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white focus:outline-none">
-                                    <option value="none">None (Hide Fibonacci Levels)</option>
+                                    <option value="none">None (Hide Fibonacci Lines)</option>
                                 </select>
                             </div>
 
-                            <div class="md:col-span-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-300">
+                            <div class="md:col-span-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-300">
                                 <label class="inline-flex items-center gap-1.5 cursor-pointer">
                                     <input type="checkbox" id="ew-chk-raw" checked class="rounded accent-indigo-500">
                                     <span>Raw Price</span>
                                 </label>
                                 <label class="inline-flex items-center gap-1.5 cursor-pointer">
-                                    <input type="checkbox" id="ew-chk-mono" checked class="rounded accent-sky-400">
-                                    <span>Monowaves (M1..n)</span>
-                                </label>
-                                <label class="inline-flex items-center gap-1.5 cursor-pointer">
                                     <input type="checkbox" id="ew-chk-group" checked class="rounded accent-rose-500">
-                                    <span>Group Waves (m1..k)</span>
-                                </label>
-                                <label class="inline-flex items-center gap-1.5 cursor-pointer">
-                                    <input type="checkbox" id="ew-chk-labels" checked class="rounded accent-emerald-400">
-                                    <span>Neely Labels</span>
+                                    <span>Major Swings</span>
                                 </label>
                                 <label class="inline-flex items-center gap-1.5 cursor-pointer">
                                     <input type="checkbox" id="ew-chk-patterns" checked class="rounded accent-amber-400">
-                                    <span>Pattern Zones (:L5/:L3)</span>
+                                    <span>Pattern Zones</span>
                                 </label>
                                 <label class="inline-flex items-center gap-1.5 cursor-pointer">
-                                    <input type="checkbox" id="ew-chk-rollbacks" checked class="rounded accent-yellow-400">
-                                    <span>Rollbacks (&lt;45&deg;)</span>
+                                    <input type="checkbox" id="ew-chk-mono" class="rounded accent-sky-400">
+                                    <span>Tiny Sub-Waves</span>
+                                </label>
+                                <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                                    <input type="checkbox" id="ew-chk-rollbacks" class="rounded accent-yellow-400">
+                                    <span>Filtered Noise</span>
                                 </label>
                             </div>
                         </div>
                     </div>
 
+                    <!-- ===== Plain-English Summary Banner ===== -->
+                    <div id="ew-summary-banner" class="mt-4 p-4 rounded-xl bg-indigo-50/80 border border-indigo-200 text-xs md:text-sm text-slate-800 leading-relaxed"></div>
+
                     <!-- ===== KPI Metrics Row ===== -->
-                    <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                    <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                         <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <p class="text-[11px] font-semibold uppercase text-slate-400">Candles</p>
-                            <p id="kpi-candles" class="text-lg font-bold text-slate-900 mt-0.5">100</p>
+                            <p class="text-[11px] font-semibold uppercase text-slate-400">1. Raw Ticks</p>
+                            <p id="kpi-candles" class="text-lg font-bold text-slate-900 mt-0.5">90 mins</p>
                             <p id="kpi-idx" class="text-[11px] text-slate-500">Idx 5570</p>
                         </div>
                         <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <p class="text-[11px] font-semibold uppercase text-slate-400">Monowaves</p>
-                            <p id="kpi-monowaves" class="text-lg font-bold text-sky-600 mt-0.5">39</p>
-                            <p class="text-[11px] text-slate-500">Chronological M1..Mn</p>
+                            <p class="text-[11px] font-semibold uppercase text-slate-400">2. Noise Filtered</p>
+                            <p id="kpi-rollbacks" class="text-lg font-bold text-amber-600 mt-0.5">2 wiggles</p>
+                            <p class="text-[11px] text-slate-500">Under 45&deg; angle</p>
                         </div>
                         <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <p class="text-[11px] font-semibold uppercase text-slate-400">Rollbacks</p>
-                            <p id="kpi-rollbacks" class="text-lg font-bold text-amber-600 mt-0.5">4</p>
-                            <p class="text-[11px] text-slate-500">Rule of Neutrality</p>
+                            <p class="text-[11px] font-semibold uppercase text-slate-400">3. Major Swings</p>
+                            <p id="kpi-groupwaves" class="text-lg font-bold text-rose-600 mt-0.5">24 waves</p>
+                            <p id="kpi-monowaves" class="text-[11px] text-slate-500">From 35 sub-waves</p>
                         </div>
                         <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <p class="text-[11px] font-semibold uppercase text-slate-400">Group Waves</p>
-                            <p id="kpi-groupwaves" class="text-lg font-bold text-rose-600 mt-0.5">25</p>
-                            <p class="text-[11px] text-slate-500">Rule of Observation</p>
+                            <p class="text-[11px] font-semibold uppercase text-slate-400">4. Trend Strength</p>
+                            <p id="kpi-directional" class="text-lg font-bold text-indigo-600 mt-0.5">78%</p>
+                            <p class="text-[11px] text-slate-500">Directional (&lt;61.8% pullback)</p>
                         </div>
                         <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <p class="text-[11px] font-semibold uppercase text-slate-400">Directional</p>
-                            <p id="kpi-directional" class="text-lg font-bold text-indigo-600 mt-0.5">68%</p>
-                            <p class="text-[11px] text-slate-500">Rule of Proportion</p>
-                        </div>
-                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <p class="text-[11px] font-semibold uppercase text-slate-400">Patterns</p>
+                            <p class="text-[11px] font-semibold uppercase text-slate-400">5. Patterns Found</p>
                             <p id="kpi-patterns" class="text-lg font-bold text-emerald-600 mt-0.5">5</p>
-                            <p class="text-[11px] text-slate-500">:L5 &amp; :L3 Isolated</p>
+                            <p class="text-[11px] text-slate-500">Completed wave sequences</p>
                         </div>
                     </div>
 
+                    <!-- ===== Visual Color Key ===== -->
+                    <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
+                        <span class="font-semibold text-slate-600 mr-1">Dot &amp; Label Color Key:</span>
+                        <span class="px-2.5 py-1 rounded-full font-semibold text-white bg-sky-500">Trend Impulse (:5 / :s5)</span>
+                        <span class="px-2.5 py-1 rounded-full font-semibold text-white bg-amber-500">Pullback / Consolidation (:F3 / :c3)</span>
+                        <span class="px-2.5 py-1 rounded-full font-semibold text-white bg-emerald-500">Pattern End — Wave 5 or C (:L5)</span>
+                        <span class="px-2.5 py-1 rounded-full font-semibold text-white bg-red-500">Triangle / Wedge End (:L3)</span>
+                    </div>
+
                     <!-- ===== Plotly Chart Container ===== -->
-                    <div class="mt-4 rounded-xl overflow-hidden border border-slate-800 bg-[#0f172a]">
-                        <div id="ew-plotly-chart" class="w-full" style="height: 520px;"></div>
+                    <div class="mt-3 rounded-xl overflow-hidden border border-slate-800 bg-[#0f172a]">
+                        <div id="ew-plotly-chart" class="w-full" style="height: 540px;"></div>
                     </div>
 
                     <!-- ===== Interactive Analysis Tabs ===== -->
                     <div class="mt-6">
-                        <div class="flex border-b border-slate-200 gap-6 text-sm font-semibold">
-                            <button type="button" data-tab="tab-waves" class="ew-tab-btn pb-3 border-b-2 border-indigo-600 text-indigo-600">
-                                Wave-by-Wave Retracement &amp; Structure Table
+                        <div class="flex flex-wrap border-b border-slate-200 gap-6 text-sm font-semibold">
+                            <button type="button" data-tab="tab-patterns" class="ew-tab-btn pb-3 border-b-2 border-indigo-600 text-indigo-600">
+                                Completed Elliott Wave Patterns (Easy View)
                             </button>
-                            <button type="button" data-tab="tab-patterns" class="ew-tab-btn pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
-                                Isolated Elliott Wave Patterns (:L5 / :L3)
+                            <button type="button" data-tab="tab-waves" class="ew-tab-btn pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+                                Detailed Swing-by-Swing Table
                             </button>
                             <button type="button" data-tab="tab-theory" class="ew-tab-btn pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
-                                Neely Chapter 3 Methodology Reference
+                                How the 5-Stage Neely Algorithm Works
                             </button>
                         </div>
 
-                        <!-- Tab 1: Wave Table -->
-                        <div id="tab-waves" class="ew-tab-panel mt-4 overflow-x-auto max-h-96 overflow-y-auto border border-slate-200 rounded-xl">
+                        <!-- Tab 1: Isolated Patterns (Default open for laypeople) -->
+                        <div id="tab-patterns" class="ew-tab-panel mt-4">
+                            <p class="text-xs text-slate-500 mb-3">
+                                When a multi-wave pattern reaches its final wave (<code>:L5</code> or <code>:L3</code>), the move is exhausted and a reversal or breakout typically follows:
+                            </p>
+                            <div id="ew-patterns-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+                        </div>
+
+                        <!-- Tab 2: Wave Table -->
+                        <div id="tab-waves" class="ew-tab-panel hidden mt-4 overflow-x-auto max-h-96 overflow-y-auto border border-slate-200 rounded-xl">
                             <table class="min-w-full divide-y divide-slate-200 text-xs text-left">
                                 <thead class="bg-slate-100 sticky top-0 text-slate-600 uppercase font-semibold">
                                     <tr>
-                                        <th class="px-3 py-2.5">Wave</th>
-                                        <th class="px-3 py-2.5">Ticks</th>
-                                        <th class="px-3 py-2.5">Start &rarr; End ($)</th>
-                                        <th class="px-3 py-2.5">|m2/m1|</th>
-                                        <th class="px-3 py-2.5">|m0/m1|</th>
-                                        <th class="px-3 py-2.5">Rule Code</th>
-                                        <th class="px-3 py-2.5">Primary</th>
-                                        <th class="px-3 py-2.5">Candidates</th>
-                                        <th class="px-3 py-2.5">Structural Interpretation</th>
+                                        <th class="px-3 py-2.5">Swing</th>
+                                        <th class="px-3 py-2.5">Role (Plain English)</th>
+                                        <th class="px-3 py-2.5">Price Move ($)</th>
+                                        <th class="px-3 py-2.5">Next Retraced</th>
+                                        <th class="px-3 py-2.5">Neely Code</th>
+                                        <th class="px-3 py-2.5">What It Means</th>
                                     </tr>
                                 </thead>
                                 <tbody id="ew-wave-tbody" class="divide-y divide-slate-100 bg-white text-slate-700"></tbody>
                             </table>
                         </div>
 
-                        <!-- Tab 2: Isolated Patterns -->
-                        <div id="tab-patterns" class="ew-tab-panel hidden mt-4">
-                            <p class="text-xs text-slate-500 mb-3">
-                                Completed Elliott Wave sequences isolated via <strong>Neely&rsquo;s Pattern Isolation Procedures</strong> (Chapter 3, pp. 3-64 to 3-67)
-                                by forward-scanning for <code>:L5</code> and <code>:L3</code> terminations and backward-tracing 3 or 5 waves:
-                            </p>
-                            <div id="ew-patterns-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
-                        </div>
-
                         <!-- Tab 3: Methodology Reference -->
                         <div id="tab-theory" class="ew-tab-panel hidden mt-4 bg-slate-50 p-5 rounded-xl border border-slate-200 text-sm text-slate-700 space-y-4">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <h3 class="font-bold text-slate-900 mb-2">Stages 1&ndash;3: Preliminary Chart Preparation</h3>
+                                    <h3 class="font-bold text-slate-900 mb-2">Stages 1&ndash;3: Cleaning &amp; Filtering Raw Prices</h3>
                                     <ul class="list-disc list-inside space-y-1.5 text-xs leading-relaxed">
-                                        <li><strong>1. Monowave Identification (p. 3-2):</strong> Every directional price segment from one change in direction to the next is indexed chronologically (<code>M1, M2, M3, ...</code>).</li>
-                                        <li><strong>2. Rule of Proportion (pp. 3-3 to 3-8):</strong> Evaluates progression angle within a 45&deg; price-time square (&plusmn;25% deviation) and separates <strong>Directional (<code>Dir</code>, &lt;61.8% retracement)</strong> from <strong>Non-Directional (<code>Non-Dir</code>, &gt;61.8% retracement)</strong> action.</li>
-                                        <li><strong>3. Rule of Neutrality (pp. 3-9 to 3-13):</strong> When price changes direction at an angle shallower than <strong>45&deg;</strong> (progressing more horizontally than vertically), the turn is rolled back into the ongoing monowave.</li>
+                                        <li><strong>Step 1 &mdash; Raw Monowaves (p. 3-2):</strong> Every time price changes direction, it forms a basic building block (<code>M1, M2, ...</code>).</li>
+                                        <li><strong>Step 2 &mdash; Rule of Proportion (pp. 3-3 to 3-8):</strong> Checks whether pullbacks are shallow (<code>&lt;61.8%</code>, Directional Trend) or deep (<code>&gt;61.8%</code>, Sideways Consolidation).</li>
+                                        <li><strong>Step 3 &mdash; Rule of Neutrality (pp. 3-9 to 3-13):</strong> If a price turn is flatter than <strong>45&deg;</strong> (moving sideways rather than up/down), the algorithm absorbs it as noise instead of counting a false wave.</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 class="font-bold text-slate-900 mb-2">Stages 4&ndash;5: Observation, Retracement &amp; Structure</h3>
+                                    <h3 class="font-bold text-slate-900 mb-2">Stages 4&ndash;5: Grouping Swings &amp; Naming Patterns</h3>
                                     <ul class="list-disc list-inside space-y-1.5 text-xs leading-relaxed">
-                                        <li><strong>4. Rules of Observation (pp. 3-14 to 3-21):</strong> Consolidates interior waves (<code>mg0, mg2</code>) until the high or low of <code>m1</code> is broken, confirming the terminal points of Group Waves (<code>m1, m2, ...</code>).</li>
-                                        <li><strong>5. Retracement Rules 1&ndash;7 &amp; Structure Labeling (pp. 3-22 to 3-67):</strong> Computes <code>|m2/m1|</code> (Rules 1&ndash;7), <code>|m0/m1|</code> (Conditions <code>a&ndash;f</code>), and <code>|m3/m2|</code> (Categories <code>i&ndash;iii</code>), then applies Pre-Constructive Rules of Logic to assign Neely Structure Labels (<code>:5, :s5, :L5, :F3, :c3, x:c3, :sL3, :L3</code>).</li>
+                                        <li><strong>Step 4 &mdash; Rules of Observation (pp. 3-14 to 3-21):</strong> Small internal waves are grouped together until price breaks above the prior swing high or below the prior swing low, producing clean <strong>Major Swings (<code>m1, m2, ...</code>)</strong>.</li>
+                                        <li><strong>Step 5 &mdash; Fibonacci Rules &amp; Structure Labels (pp. 3-22 to 3-67):</strong> Measures how much each swing is retraced by the next (<code>|m2/m1|</code>) to classify it as a <strong>Trend Impulse (<code>:5, :s5</code>)</strong>, <strong>Pullback (<code>:F3, :c3</code>)</strong>, or <strong>Pattern End (<code>:L5, :L3</code>)</strong>.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -351,15 +382,15 @@
             ":L3": "#ef4444"
         };
 
-        const STRUCTURE_DESC = {
-            ":5": "Impulsive Five (:5) — Wave 1 or 3 of an Impulse, or Wave A of a Zigzag",
-            ":s5": "Special Five (:s5) — Wave 3 of a 5th-Wave Failure/Extension or C-wave in Complex Correction",
-            ":L5": "Last Five (:L5) — Terminal Wave 5 of an Impulse or Wave C of a Flat/Zigzag",
-            ":F3": "First Three (:F3) — Wave A of a Correction or Wave 1 of a Terminal Impulse",
-            ":c3": "Center Three (:c3) — Wave B of a Correction, Triangle Leg, or Wave 3 of a Terminal",
-            "x:c3": "X-Wave Center Three (x:c3) — Connecting X-wave between two Standard Corrections",
-            ":sL3": "Second-to-Last Three (:sL3) — Wave D of a Triangle or Wave 4 of a Terminal (precedes :L3)",
-            ":L3": "Last Three (:L3) — Wave E concluding a Triangle or Wave 5 concluding a Terminal"
+        const PLAIN_ROLES = {
+            ":5": ["Trend Impulse", "Strong directional move pushing the main trend forward."],
+            ":s5": ["Extended Trend", "High-momentum trend wave (often Wave 3)."],
+            ":L5": ["Pattern End (Wave 5/C)", "Concludes a 5-wave trend or 3-wave pullback — watch for reversal."],
+            ":F3": ["Pullback Start (Wave A)", "First leg of a counter-trend pullback or consolidation."],
+            ":c3": ["Consolidation (Wave B)", "Middle corrective wave inside a pullback or triangle."],
+            "x:c3": ["Connector Wave (X)", "Links two separate corrective patterns together."],
+            ":sL3": ["Triangle Setup (Wave D)", "Second-to-last wave of a narrowing triangle or wedge."],
+            ":L3": ["Triangle End (Wave E)", "Final wave of a triangle or terminal pattern — breakout often follows."]
         };
 
         function runNeelyEngine(prices, neutralityAngle, fibTol = 0.02) {
@@ -439,8 +470,7 @@
                         const mReturn = activePrices[nIdx] - activePrices[eIdx];
                         const mono618 = 0.618 * Math.abs(mChange);
                         if (mono618 < Math.abs(mReturn)) {
-                            for (let k = sIdx; k < nIdx; k++) direction[k] = "Dir";
-                            direction[nIdx] = "Non-Dir";
+                            for (let k = sIdx; k <= nIdx; k++) direction[k] = "Non-Dir";
                         } else {
                             for (let k = sIdx; k <= nIdx; k++) direction[k] = "Dir";
                         }
@@ -464,7 +494,6 @@
                     }
                 }
 
-                // Preset first group wave
                 if (logLabel.length === 2 && stop) {
                     encodeGroupWave(0, label.length - 1);
                     stop = false;
@@ -609,6 +638,7 @@
                 }
 
                 const [sIdx, eIdx] = waveBounds(g);
+                const [rTitle, rDesc] = PLAIN_ROLES[structs[0]] || ["Wave", ""];
                 details[g] = {
                     groupIdx: g,
                     waveName: `m${g + 1}`,
@@ -621,8 +651,8 @@
                     primaryStructure: structs[0],
                     m2m1: (r21 * 100).toFixed(1),
                     m0m1: (r01 * 100).toFixed(1),
-                    m3m2: r32 !== null ? (r32 * 100).toFixed(1) : "—",
-                    meaning: STRUCTURE_DESC[structs[0]] || ""
+                    plainRole: rTitle,
+                    meaning: rDesc
                 };
             }
 
@@ -635,7 +665,9 @@
                 if (filtered.length === 0) filtered = d.structures;
                 d.structures = filtered;
                 d.primaryStructure = filtered[0];
-                d.meaning = STRUCTURE_DESC[d.primaryStructure] || "";
+                const [rTitle, rDesc] = PLAIN_ROLES[d.primaryStructure] || ["Wave", ""];
+                d.plainRole = rTitle;
+                d.meaning = rDesc;
             }
 
             // Pattern Isolation (:L5 / :L3 terminations)
@@ -668,8 +700,11 @@
                         endWave: `m${endG + 1}`,
                         startIdx: details[startG].startIdx,
                         endIdx: details[endG].endIdx,
+                        startPrice: sP,
+                        endPrice: eP,
                         termination: term,
-                        patternType: term === ":L5" ? (isImpulse ? "Impulse / 5-Wave Pattern (:L5)" : "Standard Correction — Flat/Zigzag (:L5)") : "Triangle or Terminal Pattern (:L3)",
+                        shortTag: term === ":L5" ? (isImpulse ? "5-Wave Trend" : "3-Wave Pullback") : "Triangle/Wedge",
+                        patternType: term === ":L5" ? (isImpulse ? "5-Wave Trend Impulse (Strong Directional Move)" : "3-Wave Corrective Pullback (Counter-Trend Pause)") : "5-Wave Triangle / Terminal Consolidation",
                         direction: eP >= sP ? "Bullish (Up)" : "Bearish (Down)",
                         sequence: span.map((k, idxK) => `m${k + 1}(${idxK === span.length - 1 ? term : details[k].primaryStructure})`).join(" → ")
                     });
@@ -677,7 +712,6 @@
                 }
             }
 
-            // Raw Monowave vertices
             const monoVertices = [{ idx: 0, price: activePrices[0], label: "Start" }];
             for (let i = 0; i < logLabel.length - 1; i++) {
                 const eIdx = Math.max(0, logIndex[i + 1] - 2);
@@ -703,56 +737,69 @@
             };
         }
 
-        // UI State & Rendering
         let playTimer = null;
 
         function updateAnalysis() {
             const winKey = document.getElementById("ew-window-select").value;
-            const priceType = document.getElementById("ew-price-type").value;
+            const labelMode = document.getElementById("ew-label-mode").value;
             const steps = parseInt(document.getElementById("ew-steps-slider").value, 10);
             const angle = parseFloat(document.getElementById("ew-angle-slider").value);
-            const fibChoice = document.getElementById("ew-fib-select").value;
 
             document.getElementById("ew-steps-val").textContent = steps;
             document.getElementById("ew-angle-val").innerHTML = `${angle}&deg;`;
 
             const ds = EW_DATASETS[winKey];
-            const rawPrices = ds[priceType].slice(0, steps);
+            const rawPrices = ds.open.slice(0, steps);
             const times = ds.time.slice(0, steps);
 
             const res = runNeelyEngine(rawPrices, angle, 0.02);
 
-            // Populate Fibonacci dropdown preserving selection if valid
+            // Populate Fibonacci dropdown
             const fibSelect = document.getElementById("ew-fib-select");
             const prevFib = fibSelect.value;
-            fibSelect.innerHTML = `<option value="none">None (Hide Fibonacci Levels)</option>`;
+            fibSelect.innerHTML = `<option value="none">None (Hide Fibonacci Lines)</option>`;
             for (const [gKey, d] of Object.entries(res.details)) {
                 const opt = document.createElement("option");
                 opt.value = gKey;
-                opt.textContent = `${d.waveName} — Rule ${d.ruleCode} (${d.primaryStructure})`;
+                opt.textContent = `${d.waveName} — ${d.plainRole} [${d.ruleCode}${d.primaryStructure}]`;
                 fibSelect.appendChild(opt);
             }
             if (prevFib !== "none" && res.details[prevFib]) {
                 fibSelect.value = prevFib;
             }
 
-            // KPI Metrics
+            // KPI Metrics & Plain-English Summary Banner
             const dirVals = Object.values(res.direction).filter(v => v !== null);
             const dirPct = dirVals.length ? Math.round((dirVals.filter(v => v === "Dir").length / dirVals.length) * 100) : 0;
 
-            document.getElementById("kpi-candles").textContent = rawPrices.length;
-            document.getElementById("kpi-idx").textContent = `Idx ${ds.start}`;
-            document.getElementById("kpi-monowaves").textContent = res.logLabel.length;
-            document.getElementById("kpi-rollbacks").textContent = res.rollbacks.length;
-            document.getElementById("kpi-groupwaves").textContent = res.groupIdx;
+            document.getElementById("kpi-candles").textContent = `${rawPrices.length} mins`;
+            document.getElementById("kpi-idx").textContent = `Start Idx ${ds.start}`;
+            document.getElementById("kpi-rollbacks").textContent = `${res.rollbacks.length} wiggles`;
+            document.getElementById("kpi-groupwaves").textContent = `${res.groupIdx} swings`;
+            document.getElementById("kpi-monowaves").textContent = `From ${res.logLabel.length} sub-waves`;
             document.getElementById("kpi-directional").textContent = `${dirPct}%`;
             document.getElementById("kpi-patterns").textContent = res.patterns.length;
+
+            const netDiff = rawPrices[rawPrices.length - 1] - rawPrices[0];
+            const netPct = ((netDiff / rawPrices[0]) * 100).toFixed(2);
+            const dirWord = netDiff >= 0 ? "upward (bullish)" : "downward (bearish)";
+            const phaseWord = dirPct >= 55 ? "Trending (Directional)" : "Consolidating / Choppy (Sideways)";
+            let patSummary = "No multi-wave pattern has completed yet in this window.";
+            if (res.patterns.length > 0) {
+                const lp = res.patterns[res.patterns.length - 1];
+                patSummary = `Most recently, the model isolated a <strong>${lp.patternType}</strong> from <strong>${lp.startWave} to ${lp.endWave}</strong> (${lp.direction}).`;
+            }
+            document.getElementById("ew-summary-banner").innerHTML =
+                `<strong>Plain-English Takeaway:</strong> Over these <strong>${rawPrices.length} minutes</strong>, Bitcoin moved <strong>${dirWord}</strong> by ` +
+                `<strong>$${netDiff >= 0 ? "+" : ""}${netDiff.toFixed(2)} (${netDiff >= 0 ? "+" : ""}${netPct}%)</strong>. ` +
+                `The Neely engine simplified <strong>${rawPrices.length} raw price ticks</strong> into <strong>${res.groupIdx} major swings</strong> ` +
+                `(filtering out <strong>${res.rollbacks.length} sideways wiggles</strong> under ${angle}&deg;). ` +
+                `Overall market behavior is <strong>${phaseWord} (${dirPct}% directional)</strong>. ${patSummary}`;
 
             // Build Plotly Traces
             const showRaw = document.getElementById("ew-chk-raw").checked;
             const showMono = document.getElementById("ew-chk-mono").checked;
             const showGroup = document.getElementById("ew-chk-group").checked;
-            const showLabels = document.getElementById("ew-chk-labels").checked;
             const showPatterns = document.getElementById("ew-chk-patterns").checked;
             const showRollbacks = document.getElementById("ew-chk-rollbacks").checked;
 
@@ -762,7 +809,7 @@
 
             if (showPatterns) {
                 for (const pat of res.patterns) {
-                    const isImp = pat.termination === ":L5" && pat.patternType.includes("Impulse");
+                    const isImp = pat.shortTag === "5-Wave Trend";
                     shapes.push({
                         type: "rect",
                         xref: "x",
@@ -782,9 +829,9 @@
                     x: times,
                     y: rawPrices,
                     mode: "lines",
-                    name: "BTC/USD Price",
-                    line: { color: "#64748b", width: 1.4 },
-                    hovertemplate: "<b>%{x}</b><br>Price: $%{y:,.2f}<extra>Raw Price</extra>"
+                    name: "Raw BTC/USD Price",
+                    line: { color: "rgba(148, 163, 184, 0.55)", width: 1.5 },
+                    hovertemplate: "<b>%{x}</b><br>BTC Price: $%{y:,.2f}<extra>Raw Price</extra>"
                 });
             }
 
@@ -794,18 +841,19 @@
                     y: res.monoVertices.map(v => v.price),
                     text: res.monoVertices.map(v => v.label),
                     mode: "lines+markers",
-                    name: "Monowaves (M1..n)",
+                    name: "Small Sub-Waves (M1..n)",
                     line: { color: "#38bdf8", width: 1.2, dash: "dot" },
-                    marker: { size: 5, color: "#38bdf8", symbol: "circle-open" },
-                    hovertemplate: "<b>%{text}</b><br>%{x}<br>$%{y:,.2f}<extra>Monowave</extra>"
+                    marker: { size: 4, color: "#38bdf8", symbol: "circle-open" },
+                    hovertemplate: "<b>Sub-Wave %{text}</b><br>%{x}<br>$%{y:,.2f}<extra></extra>"
                 });
             }
 
             if (showGroup && res.groupIdx > 0) {
                 const gx = [times[0]];
                 const gy = [rawPrices[0]];
-                const gtext = ["Start (m0 origin)"];
+                const gtext = ["<b>Start of Analysis Window</b>"];
                 const gcolors = ["#6366f1"];
+                const gsizes = [8];
 
                 for (let i = 0; i < res.groupIdx; i++) {
                     const arr = res.groupMonowave[i];
@@ -814,15 +862,19 @@
                     gy.push(rawPrices[eIdx]);
                     if (res.details[i]) {
                         const d = res.details[i];
+                        const isKey = [":L5", ":L3", ":5", ":s5"].includes(d.primaryStructure);
                         gcolors.push(STRUCTURE_COLORS[d.primaryStructure] || "#f43f5e");
+                        gsizes.push(isKey ? 10.5 : 8);
                         gtext.push(
-                            `<b>${d.waveName}</b> | Rule <b>${d.ruleCode}</b> &rarr; <b>${d.primaryStructure}</b><br>` +
-                            `Candidates: {${d.structures.join("/")}}<br>` +
-                            `|m2/m1|: ${d.m2m1}% | |m0/m1|: ${d.m0m1}%<br>${d.meaning}`
+                            `<b>Swing ${d.waveName}: ${d.plainRole}</b><br>` +
+                            `What it means: ${d.meaning}<br>` +
+                            `Next wave retraced: <b>${d.m2m1}%</b> | Prior wave ratio: <b>${d.m0m1}%</b><br>` +
+                            `Neely Code: Rule <b>${d.ruleCode}</b> &rarr; <b>${d.primaryStructure}</b>`
                         );
                     } else {
                         gcolors.push("#a855f7");
-                        gtext.push(`<b>m${i + 1}</b> (Developing wave context)`);
+                        gsizes.push(8);
+                        gtext.push(`<b>Swing m${i + 1}</b> (Still developing)`);
                     }
                 }
 
@@ -831,10 +883,10 @@
                     y: gy,
                     text: gtext,
                     mode: "lines+markers",
-                    name: "Group Waves (Rule of Observation)",
-                    line: { color: "#f43f5e", width: 2.6 },
-                    marker: { size: 8, color: gcolors, line: { width: 1.5, color: "#ffffff" } },
-                    hovertemplate: "%{text}<br>Time: %{x}<br>Price: $%{y:,.2f}<extra>Group Wave</extra>"
+                    name: "Major Structural Swings (m1..k)",
+                    line: { color: "#f43f5e", width: 2.7 },
+                    marker: { size: gsizes, color: gcolors, line: { width: 1.5, color: "#ffffff" } },
+                    hovertemplate: "%{text}<br>Time: %{x}<br>Price: $%{y:,.2f}<extra></extra>"
                 });
             }
 
@@ -842,35 +894,53 @@
                 traces.push({
                     x: res.rollbacks.map(r => times[r.index]),
                     y: res.rollbacks.map(r => r.price),
-                    text: res.rollbacks.map(r => `Rolled back ${r.label} (${r.angle}&deg; < ${angle}&deg;)`),
+                    text: res.rollbacks.map(r => `Filtered sideways wiggle (${r.angle}&deg; < ${angle}&deg;)`),
                     mode: "markers",
-                    name: "Neutrality Rollback (<45°)",
+                    name: "Filtered Sideways Noise (<45°)",
                     marker: { size: 9, color: "#eab308", symbol: "diamond" },
-                    hovertemplate: "<b>Neutrality Rollback</b><br>%{text}<br>$%{y:,.2f}<extra></extra>"
+                    hovertemplate: "<b>Filtered Noise</b><br>%{text}<br>$%{y:,.2f}<extra></extra>"
                 });
             }
 
-            if (showLabels && res.groupIdx > 0) {
+            if (labelMode !== "none" && res.groupIdx > 0) {
+                const patEnds = new Set(res.patterns.map(p => p.endWave));
+                const patStarts = new Set(res.patterns.map(p => p.startWave));
+
                 for (let i = 0; i < res.groupIdx; i++) {
+                    const wName = `m${i + 1}`;
                     const arr = res.groupMonowave[i];
                     const eIdx = arr[arr.length - 1];
                     const pIdx = i === 0 ? 0 : res.groupMonowave[i - 1][res.groupMonowave[i - 1].length - 1];
                     const isPeak = rawPrices[eIdx] >= rawPrices[pIdx];
                     const d = res.details[i];
-                    const col = d ? (STRUCTURE_COLORS[d.primaryStructure] || "#f43f5e") : "#94a3b8";
-                    const txt = d ? `<b>m${i + 1}</b> [${d.ruleCode}${d.primaryStructure}]` : `<b>m${i + 1}</b>`;
+                    const pStruct = d ? d.primaryStructure : "";
+                    const col = d ? (STRUCTURE_COLORS[pStruct] || "#f43f5e") : "#94a3b8";
+
+                    let txt = "";
+                    if (labelMode === "key") {
+                        const isKey = patEnds.has(wName) || patStarts.has(wName) || [":L5", ":L3", ":5", ":s5"].includes(pStruct);
+                        if (!isKey) continue;
+                        const shortTag = (pStruct === ":5" || pStruct === ":s5") ? "Trend (:5)" :
+                                         (pStruct === ":L5" ? "Pattern End (:L5)" :
+                                         (pStruct === ":L3" ? "Triangle End (:L3)" : `Pullback (${pStruct})`));
+                        txt = `<b>${wName}: ${shortTag}</b>`;
+                    } else if (labelMode === "plain") {
+                        txt = d ? `<b>${wName}</b> ${d.plainRole.split(" (")[0]}` : `<b>${wName}</b>`;
+                    } else {
+                        txt = d ? `<b>${wName}</b> [${d.ruleCode}${pStruct}]` : `<b>${wName}</b>`;
+                    }
 
                     annotations.push({
                         x: times[eIdx],
                         y: rawPrices[eIdx],
                         text: txt,
-                        yshift: isPeak ? 15 : -15,
+                        yshift: isPeak ? 16 : -16,
                         showarrow: false,
                         font: { size: 10, color: col },
-                        bgcolor: "rgba(15, 23, 42, 0.85)",
+                        bgcolor: "rgba(15, 23, 42, 0.88)",
                         bordercolor: col,
                         borderwidth: 1,
-                        borderpad: 2
+                        borderpad: 2.5
                     });
                 }
             }
@@ -881,11 +951,11 @@
                 const d = res.details[activeFib];
                 const diff = d.endPrice - d.startPrice;
                 const ratios = [
-                    [0.0, "0.0% (End)"],
-                    [0.382, "38.2% (R1/R2)"],
-                    [0.618, "61.8% (R3 Proportion)"],
-                    [1.0, "100.0% (R4/R5)"],
-                    [1.618, "161.8% (R5/R6)"]
+                    [0.0, "0.0% (Wave End)"],
+                    [0.382, "38.2% (Shallow Support/Resistance)"],
+                    [0.618, "61.8% (Golden Ratio Pivot)"],
+                    [1.0, "100.0% (Full Retracement)"],
+                    [1.618, "161.8% (Fibonacci Extension)"]
                 ];
                 for (const [rv, rlabel] of ratios) {
                     const yVal = d.endPrice - diff * rv;
@@ -908,22 +978,34 @@
                         yshift: 8,
                         text: `${d.waveName} ${rlabel}: $${yVal.toFixed(1)}`,
                         showarrow: false,
-                        font: { size: 9, color: "#38bdf8" },
-                        bgcolor: "rgba(15, 23, 42, 0.8)"
+                        font: { size: 9.5, color: "#38bdf8" },
+                        bgcolor: "rgba(15, 23, 42, 0.85)"
                     });
                 }
             }
 
+            // Legend placed below chart (y: -0.15) so it NEVER overlaps title
             const layout = {
                 paper_bgcolor: "#0f172a",
                 plot_bgcolor: "#0f172a",
                 font: { color: "#e2e8f0", family: "Inter, sans-serif" },
-                margin: { l: 55, r: 20, t: 40, b: 40 },
+                margin: { l: 60, r: 20, t: 55, b: 85 },
                 title: {
-                    text: `Glenn Neely Elliott Wave Structural Analysis — ${ds.label} (${rawPrices.length} Ticks)`,
-                    font: { size: 13, color: "#f8fafc" }
+                    text: `BTC/USD Structural Wave Map — ${ds.label} (${rawPrices.length} Mins | ${res.groupIdx} Major Swings | ${res.patterns.length} Patterns)`,
+                    y: 0.95,
+                    x: 0.02,
+                    xanchor: "left",
+                    yanchor: "top",
+                    font: { size: 13.5, color: "#f8fafc" }
                 },
-                legend: { orientation: "h", y: 1.11, x: 0, font: { size: 11 } },
+                legend: {
+                    orientation: "h",
+                    yanchor: "top",
+                    y: -0.15,
+                    xanchor: "center",
+                    x: 0.5,
+                    font: { size: 11.5 }
+                },
                 xaxis: { gridcolor: "#1e293b", tickfont: { size: 10 } },
                 yaxis: { gridcolor: "#1e293b", tickprefix: "$", tickfont: { size: 10 } },
                 shapes: shapes,
@@ -942,13 +1024,10 @@
                 const badgeCol = STRUCTURE_COLORS[d.primaryStructure] || "#6366f1";
                 tr.innerHTML = `
                     <td class="px-3 py-2 font-bold text-slate-900">${d.waveName}</td>
-                    <td class="px-3 py-2 text-slate-500">${d.startIdx} &rarr; ${d.endIdx}</td>
+                    <td class="px-3 py-2 font-semibold text-slate-800">${d.plainRole}</td>
                     <td class="px-3 py-2 font-mono">$${d.startPrice.toLocaleString()} &rarr; $${d.endPrice.toLocaleString()}</td>
                     <td class="px-3 py-2 font-semibold">${d.m2m1}%</td>
-                    <td class="px-3 py-2">${d.m0m1}%</td>
-                    <td class="px-3 py-2"><span class="px-2 py-0.5 rounded bg-slate-100 font-mono font-bold text-slate-800">${d.ruleCode}</span></td>
-                    <td class="px-3 py-2"><span class="px-2 py-0.5 rounded font-mono font-bold text-white" style="background:${badgeCol}">${d.primaryStructure}</span></td>
-                    <td class="px-3 py-2 font-mono text-slate-500">{${d.structures.join(" / ")}}</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 rounded font-mono font-bold text-white" style="background:${badgeCol}">${d.ruleCode} ${d.primaryStructure}</span></td>
                     <td class="px-3 py-2 text-slate-600">${d.meaning}</td>
                 `;
                 tbody.appendChild(tr);
@@ -958,7 +1037,7 @@
             const pGrid = document.getElementById("ew-patterns-grid");
             pGrid.innerHTML = "";
             if (res.patterns.length === 0) {
-                pGrid.innerHTML = `<div class="col-span-2 text-xs text-slate-500 italic p-4 bg-slate-50 rounded-xl border border-slate-200">No :L5 or :L3 pattern terminations isolated in this tick range yet. Increase the simulation ticks slider.</div>`;
+                pGrid.innerHTML = `<div class="col-span-2 text-xs text-slate-500 italic p-4 bg-slate-50 rounded-xl border border-slate-200">No completed multi-wave patterns in this range yet. Increase the Time Window slider above.</div>`;
             } else {
                 for (const pat of res.patterns) {
                     const card = document.createElement("div");
@@ -967,10 +1046,11 @@
                     card.innerHTML = `
                         <div>
                             <div class="flex items-center justify-between gap-2">
-                                <span class="text-xs font-bold text-indigo-700">${pat.startWave} &rarr; ${pat.endWave} (${pat.termination})</span>
+                                <span class="text-xs font-bold text-indigo-700">${pat.startWave} &rarr; ${pat.endWave} (${pat.shortTag})</span>
                                 <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold ${isBull ? "bg-emerald-100 text-emerald-800" : "bg-rose-100 text-rose-800"}">${pat.direction}</span>
                             </div>
                             <p class="text-sm font-bold text-slate-900 mt-1">${pat.patternType}</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Price: $${pat.startPrice.toLocaleString()} &rarr; $${pat.endPrice.toLocaleString()}</p>
                             <p class="text-xs font-mono text-slate-600 mt-1.5 bg-white px-2.5 py-1.5 rounded border border-slate-200">${pat.sequence}</p>
                         </div>
                     `;
@@ -980,7 +1060,6 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            // Mobile navigation menu
             const menuBtn = document.getElementById("menu-btn");
             const mobileMenu = document.getElementById("mobile-menu");
             const menuIconOpen = document.getElementById("menu-icon-open");
@@ -994,9 +1073,8 @@
                 });
             }
 
-            // Controls listeners
-            ["ew-window-select", "ew-price-type", "ew-steps-slider", "ew-angle-slider", "ew-fib-select",
-             "ew-chk-raw", "ew-chk-mono", "ew-chk-group", "ew-chk-labels", "ew-chk-patterns", "ew-chk-rollbacks"].forEach(id => {
+            ["ew-window-select", "ew-label-mode", "ew-steps-slider", "ew-angle-slider", "ew-fib-select",
+             "ew-chk-raw", "ew-chk-mono", "ew-chk-group", "ew-chk-patterns", "ew-chk-rollbacks"].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) el.addEventListener("input", updateAnalysis);
             });
@@ -1043,7 +1121,6 @@
                 }
             });
 
-            // Tabs switching
             const tabBtns = document.querySelectorAll(".ew-tab-btn");
             const tabPanels = document.querySelectorAll(".ew-tab-panel");
             tabBtns.forEach(btn => {
