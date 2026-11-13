@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellaneous | Changhee Han</title>
+    <meta name="description" content="Miscellaneous notes and updates by Changhee Han.">
+    <meta name="author" content="Changhee Han">
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- ===== Header & Navigation ===== -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-700">
+                        Changhee Han
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="index.html" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                    <a href="working-papers.html" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Working Papers</a>
+                    <a href="presentations.html" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Presentations</a>
+                    <a href="miscellaneous.html" class="text-indigo-600 font-semibold transition-colors duration-200">Miscellaneous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-indigo-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="menu-icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden shadow-lg border-t border-slate-200 bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="working-papers.html" class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Working Papers</a>
+                <a href="presentations.html" class="text-slate-600 hover:bg-slate-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Presentations</a>
+                <a href="miscellaneous.html" class="bg-indigo-50 text-indigo-600 font-semibold block px-3 py-2 rounded-md text-base">Miscellaneous</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main class="flex-grow py-12 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+                Miscellaneous
+            </h1>
+
+            <!-- ==========================================================
+                 WRITE YOUR MISCELLANEOUS NOTES / POSTS BELOW
+                 Copy and paste the <div class="bg-white ..."> block to add more items!
+                 ========================================================== -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <p class="text-slate-600">
+                        Coming soon — notes, resources, and personal updates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="py-6 bg-slate-800 text-slate-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2026 Changhee Han. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    const isOpen = mobileMenu.classList.toggle('hidden');
+                    menuIconOpen.classList.toggle('hidden', !isOpen);
+                    menuIconClose.classList.toggle('hidden', isOpen);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
